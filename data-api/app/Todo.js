@@ -59,27 +59,46 @@ export default class Todo {
      * 
      * if todoId exist in todos edit todoId. else return error. 
      */
-    edit (todoId) {}
+    edit (todoId, newContent) {
+        let newTodos = this.todos.map(todo => {
+
+            // get new todo and assign the new contents to it
+            if(todo.id = todoId) todo = newContent
+            return todo
+        });
+
+        this.deleteAllTodos();
+        this.todos = newTodos;
+
+        return newContent
+    }
 
 
     /**
      * 
      *  if todoId exists in todos return the founded todo as object. else return empty object.
      */
-    read (todoId) {}
+    read (todoId) {
+        let todo = this.todos.filter(todo => todo.id == todoId);
+
+        if(todo.length > -1) return todo;
+        throw new Error('todo not found')
+    }
 
 
     /**
      * 
      * return todos
      */
-    readAllTodos () {}
+    readAllTodos () {
+        return this.todo
+    }
 
 
-    /**
-     * 
-     * it todoId exists in todos, update it and return the updated todo. else return error.
-     */
-    updateTodo (todoId) {}
+    // /**
+    //  * 
+    //  * it todoId exists in todos, update it and return the updated todo. else return error.
+    //  */
+    // updateTodo (todoId) {}
 
 }

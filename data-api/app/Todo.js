@@ -25,24 +25,35 @@ export default class Todo {
 
     /**
      *
-     * if it contains todo with keys: todo and decription add it to todos and return true;
+     * if it contains todo with keys: date, title and decription add it to todos and return true;
      * if not return error. 
      */
-    createTodo(todo) {};
+    createTodo(todo) {
+        const {date, title, description} = todo;
+        if(date && title && description) this.todos = todo;
+    };
 
     /**
      * 
      * if todoId exists in todos, delete todoId.
      * esle return error
      */
-    deleteTodo (todoId) {}
+    deleteTodo (todoId) {
+        let todos = this.todos;
+        let newTodos = todos.filter(todo => todo.id !== todoId);
+        this.deleteAllTodos();
+        this.todos = newTodos
+
+    }
 
 
     /**
      * 
      * delete all todos
      */
-    deleteAllTodos () {}
+    deleteAllTodos () {
+        localStorage.removeItem('todos')
+    }
 
     /**
      * 

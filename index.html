@@ -16,28 +16,52 @@
             <h1>create a todo list</h1>
             <section class="userInput-section">
                 <div class="user-inputs">
-                    <label for="title">enter todo title</label>
-                    <input type="text" placeholder="enter title" id="title">
+                    <div class="inputs">
+                        <div>
+                            <label for="title">enter todo title:</label>
+                            <input type="text" placeholder="enter title" id="title">
+                        </div>
+                        <div>
+                            <label for="date">choose a date:</label>
+                            <input type="date" id="date">
+                        </div>
+                    </div>
+                    <div class="textarea">
+                        <label for="textarea">enter description:</label>
+                        <textarea name="" id="textarea" cols="30" rows="15"></textarea>
+                    </div>
 
-                    <label for="description">enter some description</label>
-                    <input type="text" placeholder="description" id="description">
-
-                    <label for="date">choose a date</label>
-                    <input type="date" id="date">
-
-                    <button class="creat-todo">create</button>
+                    <button class="create-todo">create</button>
                 </div>
+                <section class="todoList-section">
+                    <div class="todo-container">
+                        <h2 class="title">your title</h2>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis saepe
+                            accusantium ea nam aperiam libero vel voluptates nemo pariatur iusto!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Dicta atque assumenda in ipsam deserunt maiores?
+                        </p>
+                        <p class="date">20/10/2019</p>
+                        <br>
+                        <button class="delete">delete</button>
+                        <button class="edit">edit</button>
+                    </div>
+                </section>
 
                 <section class="todoList-section">
                     <div class="todo-container">
-                        <h2>your title</h2>
-                        <hr>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis saepe 
+                        <h2 class="title">your title</h2>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis saepe
                             accusantium ea nam aperiam libero vel voluptates nemo pariatur iusto!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Dicta atque assumenda in ipsam deserunt maiores?
                         </p>
-                        <hr>
-                        <p>20/10/2019</p>
+                        <p class="date">20/10/2019</p>
+                        <br>
+                        <button class="delete">delete</button>
+                        <button class="edit">edit</button>
                     </div>
                 </section>
             </section>

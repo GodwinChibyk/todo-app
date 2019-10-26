@@ -7,9 +7,21 @@ export default class Todo {
     
 
     constructor() {
-        // check if todo list alreday exist in local storage, if true parse it's value and assign it to todos
-        this.todos;
     };
+
+
+    // get todos
+    get todos() {
+        // check if todo list alreday exist in local storage, if true parse it's value and assign it to todos
+        return JSON.parse(localStorage.getItem('todos')) || []
+    }
+
+    // set todos
+    set todos(value) {
+        let todos = JSON.parse(localStorage.getItem('todos'));
+        todos = [...todos, value];
+        localStorage.setItem('todos',JSON.stringify(todos))
+    }
 
     /**
      *

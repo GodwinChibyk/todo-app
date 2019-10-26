@@ -1,12 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="ui/assets/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="ui/assets/style/style.css">
+    <title>Todo App</title>
 </head>
+
 <body>
-    
+    <div id="page-wrapper">
+        <div class="app-container">
+            <h1>create a todo list</h1>
+            <section class="userInput-section">
+                <div class="user-inputs">
+                    <div class="inputs">
+                        <div>
+                            <label for="title">enter todo title:</label>
+                            <input type="text" placeholder="enter title" id="title">
+                        </div>
+                        <div>
+                            <label for="date">choose a date:</label>
+                            <input type="date" id="date">
+                        </div>
+                    </div>
+                    <div class="textarea">
+                        <label for="textarea">enter description:</label>
+                        <textarea name="" id="textarea" cols="30" rows="15"></textarea>
+                    </div>
+
+                    <button class="create-todo">create</button>
+                </div>
+                <section class="todoList-section">
+                    <div class="todo-container">
+                        <h2 class="title">your title</h2>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis saepe
+                            accusantium ea nam aperiam libero vel voluptates nemo pariatur iusto!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Dicta atque assumenda in ipsam deserunt maiores?
+                        </p>
+                        <p class="date">20/10/2019</p>
+                        <br>
+                        <button class="delete">delete</button>
+                        <button class="edit">edit</button>
+                    </div>
+                </section>
+
+                <section class="todoList-section">
+                    <div class="todo-container">
+                        <h2 class="title">your title</h2>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis saepe
+                            accusantium ea nam aperiam libero vel voluptates nemo pariatur iusto!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Dicta atque assumenda in ipsam deserunt maiores?
+                        </p>
+                        <p class="date">20/10/2019</p>
+                        <br>
+                        <button class="delete">delete</button>
+                        <button class="edit">edit</button>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </div>
 </body>
+
 </html>

@@ -167,8 +167,37 @@ button.edit {
 
 /* @madia querry styles  */
 @media only screen and (max-width: 768px) {
+
+    .fa {
+        margin-right: 2px;
+    }
     #page-wrapper {
         width: 100%;
         min-height: 100vh;
+    }
+
+    .user-inputs {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .msgbox-out {
+        transform: translateY(200px);
+    }
+
+    .todo-container button {
+        width: 60px;
+        padding: 4px;
+        display: inline-block;
+        font-size: 0.7rem;
+    }
+    button.delete {
+        background-color: red;
+        margin-right: 10px;
+    }
+    .title {
+        font-size: 1rem;
+    }
+    .date {
+        font-size: .75rem;
     }
 }

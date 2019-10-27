@@ -38,8 +38,8 @@ app.displayTodos = function() {
     allTodosContainer.innerHTML = `
         <p> You have not added any todo </p>
         `;
-  } else{
-      allTodosContainer.innerHTML = todosHtml
+  } else {
+    allTodosContainer.innerHTML = todosHtml;
   }
 };
 
@@ -48,12 +48,14 @@ app.displaySingleTodo = function(todoId) {};
 
 // create todo
 app.createTodo = function() {
-  // let dateElm = getElement('.createdate');
-  // let descElm = getElement('.createdesc');
-  // let {value: date} = dateElm;
-  // let {value: description} = descElm;
-  // let todo = {date, description};
-  // todosObj.createTodo(todo)
+  let titleElm = getElement("#title");
+  let dateElm = getElement("#date");
+  let descElm = getElement("#description");
+  let { value: date } = dateElm;
+  let { value: description } = descElm;
+  let { value: title } = titleElm;
+  let todo = { date, description, title };
+  todosObj.createTodo(todo);
 };
 
 // delete todo
@@ -71,8 +73,10 @@ app.updateTodo = function(todoId) {};
 // create app initialization engine
 app.init = function() {
   // get any element
+  let createBtn = getElement(".create-todo");
+  createBtn.addEventListener('click', this.createTodo)
   // add all event listeners
-  app.displayTodos()
+  app.displayTodos();
 };
 
 // Initialize app

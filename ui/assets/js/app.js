@@ -95,7 +95,7 @@ app.createTodo = function () {
     },4000);
     dateElm.value = '';
     titleElm.value = '';
-    dateElm.value = '';
+    descElm.value = '';
   }
   else{
     alert('All of the input field is required');

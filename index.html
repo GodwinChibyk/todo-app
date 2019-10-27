@@ -1,82 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="ui/assets/font-awesome-4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="ui/assets/font-awesome-4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="ui/assets/style/style.css" />
     <title>Todo App</title>
-  </head>
+</head>
 
 <body>
 
-    .msgBox-wrapper>.message-box
+    <body>
+        <div id="page-wrapper">
+            <!-- message box pop-up -->
+                <div class="message-box">
+                    <p class="message">Your todo was "created" successfully</p>
+                </div>
 
-  <body>
-    <div id="page-wrapper">
-      <div class="app-container">
-        <h1>create a todo list</h1>
-        <section class="userInput-section">
-          <div class="user-inputs">
-            <div class="inputs">
-              <div>
-                <label for="title">enter todo title:</label>
-                <input type="text" placeholder="enter title" id="title" />
-              </div>
-              <div>
-                <label for="date">choose a date:</label>
-                <input type="date" id="date" />
-              </div>
+            <div class="app-container">
+                <h1>create a todo list</h1>
+                <section class="userInput-section">
+                    <div class="user-inputs">
+                        <div class="inputs">
+                            <div>
+                                <label for="title">enter todo title:</label>
+                                <input type="text" placeholder="enter title" id="title" />
+                            </div>
+                            <div>
+                                <label for="date">choose a date:</label>
+                                <input type="date" id="date" />
+                            </div>
+                        </div>
+                        <div class="textarea">
+                            <label for="textarea">enter description:</label>
+                            <textarea name="" id="description" cols="30" rows="15"></textarea>
+                        </div>
+
+                        <button class="create-todo"><i class="fa fa-plus"></i>create</button>
+                        <button class="edit-todo"><i class="fa fa-edit"></i>edit</button>
+                    </div>
+                    <section class="all-todos">
+                        <section class="todoList-section">
+                            <div class="todo-container">
+                                <h2 class="title">your title</h2>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Reiciendis saepe accusantium ea nam aperiam libero vel
+                                    voluptates nemo pariatur iusto! Lorem ipsum dolor sit amet
+                                    consectetur adipisicing elit. Dicta atque assumenda in ipsam
+                                    deserunt maiores?
+                                </p>
+                                <p class="date">20/10/2019</p>
+                                <br />
+                                <button class="delete"><i class="fa fa-plus"></i>delete</button>
+                                <button class="edit">edit</button>
+                            </div>
+                        </section>
+
+                        <section class="todoList-section">
+                            <div class="todo-container">
+                                <h2 class="title">your title</h2>
+                                <p class="description">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Reiciendis saepe accusantium ea nam aperiam libero vel
+                                    voluptates nemo pariatur iusto! Lorem ipsum dolor sit amet
+                                    consectetur adipisicing elit. Dicta atque assumenda in ipsam
+                                    deserunt maiores?
+                                </p>
+                                <p class="date">20/10/2019</p>
+                                <br />
+                                <button class="delete">delete</button>
+                                <button class="edit">edit</button>
+                            </div>
+                        </section>
+                    </section>
+                </section>
             </div>
-            <div class="textarea">
-              <label for="textarea">enter description:</label>
-              <textarea name="" id="description" cols="30" rows="15"></textarea>
-            </div>
+        </div>
+        <script src="./dist/build.js"></script>
 
-            <button class="create-todo">create</button>
-          </div>
-          <section class="all-todos">
-            <section class="todoList-section">
-              <div class="todo-container">
-                <h2 class="title">your title</h2>
-                <p class="description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reiciendis saepe accusantium ea nam aperiam libero vel
-                  voluptates nemo pariatur iusto! Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Dicta atque assumenda in ipsam
-                  deserunt maiores?
-                </p>
-                <p class="date">20/10/2019</p>
-                <br />
-                <button class="delete">delete</button>
-                <button class="edit">edit</button>
-              </div>
-            </section>
+    </body>
 
-            <section class="todoList-section">
-              <div class="todo-container">
-                <h2 class="title">your title</h2>
-                <p class="description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Reiciendis saepe accusantium ea nam aperiam libero vel
-                  voluptates nemo pariatur iusto! Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit. Dicta atque assumenda in ipsam
-                  deserunt maiores?
-                </p>
-                <p class="date">20/10/2019</p>
-                <br />
-                <button class="delete">delete</button>
-                <button class="edit">edit</button>
-              </div>
-            </section>
-          </section>
-        </section>
-      </div>
-    </div>
-    <script src="./dist/build.js"></script>
-  </body>
 </html>

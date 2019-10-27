@@ -66,8 +66,14 @@ app.createTodo = function() {
     </p>
     <p class="date">${date}</p>
     <br />
-    <button class="delete">delete</button>
-    <button class="edit">edit</button>
+    <button class="delete"> 
+    <i class="fa fa-remove"></i>
+      delete
+    </button>
+    <button class="edit">
+    <i class="fa fa-edit"></i>
+      edit
+    </button>
     </div>
   `;
   allTodosContainer.appendChild(sectionElement);

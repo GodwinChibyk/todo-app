@@ -3,7 +3,7 @@
 
 // Get the element containing this selector and return it
 export function getElement(selector) {
-    
+    return document.querySelector(selector)
 }
 
 // Get all the elements containing this selector and return them.

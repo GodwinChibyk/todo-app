@@ -23,6 +23,7 @@ a {
     line-height: 100%;
     display: inline-block;
     font-size: inherit;
+    margin-right: 4px;
 }
 
 ul {
@@ -40,6 +41,7 @@ body {
     min-height: 100vh;
     margin: 0 auto;
     background-color: inherit;
+    position: relative;
 }
 .app-container {
     width: 100%;
@@ -86,7 +88,7 @@ body {
     width: 100%;
     padding: 10px;
 }
-button.create-todo {
+button.create-todo, .edit-todo {
     width: 50%;
     display: block;
     padding: 10px;
@@ -95,6 +97,9 @@ button.create-todo {
     color: #fff;
     border: 1px solid #fff;
     text-transform: uppercase;
+}
+.edit-todo {
+    display: none;
 }
 
 .todoList-section {
@@ -129,6 +134,30 @@ button.delete {
 }
 button.edit {
     background-color: green;
+}
+
+.message-box {
+    width: 100%;
+    display: inline-block;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-200px); 
+    transition: transform .7s ease-in;
+}
+.msgbox-out {
+    transform: translateY(25px);
+}
+.message {
+    display: inline-block;
+    padding: 20px;
+    z-index: 334;
+    text-align: center;
+    text-transform: capitalize;
+    background-color: #7aa87a;  
 }
 
 

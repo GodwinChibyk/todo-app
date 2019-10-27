@@ -15,9 +15,8 @@ app.todos = todosObj.todos;
 // loop through them and display them
 app.displayTodos = function() {
   let todosHtml = "";
-
   this.todos.forEach(todo => {
-    let singleTodo = `
+    todosHtml += `
         <section class="todoList-section">
                     <div class="todo-container">
                         <h2 class="title">${todo.title}</h2>
@@ -56,6 +55,22 @@ app.createTodo = function() {
   let { value: title } = titleElm;
   let todo = { date, description, title };
   todosObj.createTodo(todo);
+  let allTodosContainer = getElement(".all-todos");
+  let sectionElement = document.createElement("section");
+  sectionElement.classList.add("todoList-section");
+  sectionElement.innerHTML = `
+  <div class="todo-container">
+  <h2 class="title">${title}</h2>
+    <p class="description">
+       ${description}
+    </p>
+    <p class="date">${date}</p>
+    <br />
+    <button class="delete">delete</button>
+    <button class="edit">edit</button>
+    </div>
+  `;
+  allTodosContainer.appendChild(sectionElement);
 };
 
 // delete todo
@@ -74,7 +89,7 @@ app.updateTodo = function(todoId) {};
 app.init = function() {
   // get any element
   let createBtn = getElement(".create-todo");
-  createBtn.addEventListener('click', this.createTodo)
+  createBtn.addEventListener("click", this.createTodo);
   // add all event listeners
   app.displayTodos();
 };

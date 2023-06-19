@@ -160,7 +160,13 @@ button.edit {
     background-color: #7aa87a;  
 }
 
-
+.privacy{
+    color: #000;
+    display: block;
+    margin-top: 10px;
+    width: 17%;
+    padding: 5px;
+}
 
 
 

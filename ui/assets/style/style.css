@@ -31,10 +31,21 @@ ul {
     list-style: none;
 }
 
-body {
+body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 14px;
     background-color: #fff;
+}
+body.about{
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    background-color: #fff;
+}
+body div.about-us{
+    padding: 10px 20px;
+    height: 100vh;
+    text-align: justify;
 }
 #page-wrapper {
     width: 60%;
@@ -43,7 +54,7 @@ body {
     background-color: inherit;
     position: relative;
 }
-.app-container {
+.app-container, body div.about-us {
     width: 100%;
     min-height: 90vh;
     background-color: #dadada;
@@ -61,6 +72,10 @@ body {
     margin: 0 auto;
     margin-bottom: 20px;
     
+}
+.user-inputs a{
+    color: black;
+    margin-top: 20px;
 }
 .user-inputs label{
     display: block;
